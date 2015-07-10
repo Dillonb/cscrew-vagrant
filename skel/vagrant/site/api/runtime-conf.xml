@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <propel>
+        <datasources default="cscrew">
+            <datasource id="cscrew">
+                <adapter>mysql</adapter> <!-- sqlite, mysql, mssql, oracle, or pgsql -->
+                <connection>
+                    <dsn>mysql:host=localhost;dbname=cscrew</dsn>
+                    <user>root</user>
+                    <password>thisisasecurepassword</password>
+                </connection>
+            </datasource>
+        </datasources>
+    </propel>
+</config>
