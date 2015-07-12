@@ -11,7 +11,7 @@ yum -y install epel-release
 
 # Install required packages
 # We can get most from the repos
-yum install -y git php-pear sendmail htop httpd mysql-server php php-mysql php-cli vim php-xml screen rubygems php-pecl-memcache php-mbstring php-gd php-ldap
+yum install -y git php-pear sendmail htop httpd mysql-server php php-mysql php-cli vim php-xml screen rubygems php-pecl-memcache php-mbstring php-gd php-ldap openldap-clients
 
 # SASS
 sudo gem install sass
@@ -43,8 +43,8 @@ echo "Creating database..."
 mysql -u root --password=thisisasecurepassword < /vagrant/create_database.sql
 
 cd /vagrant/site/api
-./propel-gen
-./propel-gen insert-sql
+./vendor/propel/propel1/generator/bin/propel-gen
+./vendor/propel/propel1/generator/bin/propel-gen insert-sql
 
 # Restart apache just to be sure that the new config files were recognized...
 service httpd restart
