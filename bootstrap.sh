@@ -11,7 +11,7 @@ yum -y install epel-release
 
 # Install required packages
 # We can get most from the repos
-yum install -y git php-pear sendmail htop httpd mysql-server php php-mysql php-cli vim php-xml screen rubygems php-pecl-memcache php-mbstring php-gd php-ldap
+yum install -y git php-pear sendmail htop httpd mysql-server php php-mysql php-cli vim php-xml screen rubygems php-pecl-memcache php-mbstring php-gd php-ldap phpmyadmin
 
 # SASS
 sudo gem install sass
